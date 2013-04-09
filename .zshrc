@@ -10,8 +10,8 @@ setopt histignorealldups sharehistory
 bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 autoload -U history-search-end
@@ -68,6 +68,8 @@ case $TERM in
     }
     ;;
 esac
+
+alias 2screens='sudo xrandr --output VGA1 --auto --left-of LVDS1'
 
 LANG=C fortune -s
 export PATH="/home/frlan/bin:/home/frlan/local/bin/:$PATH"
